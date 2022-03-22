@@ -25,7 +25,7 @@ function SumOfArrNum (arr) {
 function getPowersOfTree (num1, num2) {
     let result = [];
     for(num1 ; num1 < num2 ; num1++){
-        if(Math.log2(num1) / Math.log2(3) % 1 === 0 && num1 !== 1) {
+        if(Math.log10(num1) / Math.log10(3) % 1 === 0 && num1 !== 1) {
             result.push(num1);
         }
     }
@@ -83,3 +83,37 @@ function primeNum (num) {
     }
     return primeNumArr[primeNumArr.length - 1];
 }
+
+//Exercise 5.1
+
+function isPrime(num) {
+    if(num <= 1){
+        return false;
+    }
+    if(num === 2 || num === 3){
+        return true;
+    }
+    for (let i = 2; i < num; i++){
+        if (num % i === 0){
+          return false; 
+        }
+    }
+    return true;
+}
+
+function primNum (number) {
+    let result = [];
+    for(let i = 0 ; result.length < number ; i++) {
+        if(isPrime(i) === true){
+            result.push(i);
+        } else {
+            continue;
+        }
+    }
+    return result[result.length - 1];
+}
+
+
+
+
+
